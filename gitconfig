@@ -1,0 +1,41 @@
+[user]
+	signingkey = 0045E653
+	name = Adrian Brink
+	email = adrian@brink-holdings.com
+[core]
+	excludesfile = ~/.gitignore_global
+[color]
+	ui = auto
+[alias]
+	a = add
+	b = branch
+	co = checkout
+	ci = commit
+	cia = commit -a
+	ciam = commit -a -m
+	d = diff
+	h = help
+	s = status -s
+	tre = log --graph --decorate --pretty=oneline --abbrev-commit
+	tr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %s' --abbrev-commit
+  l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %s' --decorate --abbrev-commit
+  
+  change = codereview change
+  gofmt = codereview gofmt
+  mail = codereview mail
+  pending = codereview pending
+  submit = codereview submit
+  sync = codereview sync
+[push]
+	default = simple
+[gc]
+	autoDetach = false
+[commit]
+	template = ~/.gitmessage
+	gpgsign = true
+[pull]
+	rebase = true
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
+[http]
+	cookiefile = /Users/adrian/.gitcookies

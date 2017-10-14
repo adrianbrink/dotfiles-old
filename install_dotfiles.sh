@@ -4,7 +4,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="spacemacs"
+files="spacemacs gitconfig gitignore_global gitmessage"
 
 ##########
 
