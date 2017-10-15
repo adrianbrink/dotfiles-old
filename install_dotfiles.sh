@@ -4,7 +4,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="spacemacs gitconfig gitignore_global gitmessage tmux"
+files="spacemacs gitconfig gitignore_global gitmessage tmux.conf"
 
 ##########
 
