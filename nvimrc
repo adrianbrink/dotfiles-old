@@ -4,81 +4,81 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Git bits
-"Plug 'airblade/vim-gitgutter'
-"Plug 'tpope/vim-fugitive'
-"Plug 'tpope/vim-rhubarb'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " Buffer Navigation
-"Plug 'troydm/easybuffer.vim'
+Plug 'troydm/easybuffer.vim'
 
 " Wizard autocompletion
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 " Emoji autocompletion for commit messages and markdown
-"Plug 'fszymanski/deoplete-emoji'
+Plug 'fszymanski/deoplete-emoji'
 
 " make tab do all
-"Plug 'ervandew/supertab'
+Plug 'ervandew/supertab'
 
 " text snippets
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " less keystrokes
-"Plug 'tpope/vim-endwise'
-"Plug 'jiangmiao/auto-pairs'
-"Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-endwise'
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
 
 " Linty lint
 "Plug 'w0rp/ale'
 
 " Text swizzeling
-"Plug 'tpope/vim-surround'
-"Plug 'tpope/vim-commentary'
-"Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
 
 " junegunn 🙏
 " see contents of registers real quick
-"Plug 'junegunn/vim-peekaboo'
+Plug 'junegunn/vim-peekaboo'
 " fuzzy file search
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install'  } | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install'  } | Plug 'junegunn/fzf.vim'
 " tranquil poetry mode
-"Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'
 " emoji, the blood of life
-"Plug 'junegunn/vim-emoji'
+Plug 'junegunn/vim-emoji'
 
 " pretty colours
-"Plug 'chriskempson/base16-vim'
+Plug 'chriskempson/base16-vim'
 
 " font icon yokeys
-"Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " Directory exploration
 "Plug 'justinmk/vim-dirvish'
 
 " Status Bar + Buffer Bar
-"Plug 'vim-airline/vim-airline'
-"Plug '22a/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug '22a/vim-airline-themes'
 
 " visual indentation levels
-"Plug 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Seeing whitespace is fun
-"Plug 'ntpeters/vim-better-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
 
 " tmux
-"Plug 'tmux-plugins/vim-tmux-focus-events'
-"Plug 'tmux-plugins/vim-tmux'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tmux-plugins/vim-tmux'
 
 " speed grep things
-"Plug 'mhinz/vim-grepper'
+Plug 'mhinz/vim-grepper'
 
 " hex colours inline
-"Plug 'chrisbra/Colorizer'
+Plug 'chrisbra/Colorizer'
 
 " numbered search matches
-"Plug 'henrik/vim-indexed-search'
+Plug 'henrik/vim-indexed-search'
 
 " editor config
-"Plug 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 

@@ -2,17 +2,17 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-"zplug "mafredri/zsh-async"
-"zplug "22a/purest"
-"zplug "zsh-users/zsh-syntax-highlighting", defer:2
-"zplug "zsh-users/zsh-completions"
-"zplug "zsh-users/zsh-autosuggestions"
-"zplug "zsh-users/zsh-history-substring-search", defer:3
-"zplug "modules/completion", from:prezto
-"zplug "plugins/colored-man-pages", from:oh-my-zsh
-"zplug "paulirish/git-open", as:plugin
-"zplug "djui/alias-tips"
-"zplug "rupa/z", use:z.sh
+zplug "mafredri/zsh-async"
+zplug "22a/purest"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "modules/completion", from:prezto
+zplug "plugins/colored-man-pages", from:oh-my-zsh
+zplug "paulirish/git-open", as:plugin
+zplug "djui/alias-tips"
+zplug "rupa/z", use:z.sh
 
 if ! zplug check --verbose; then
     printf "Install zplug plugins? [y/N]: "
@@ -148,3 +148,5 @@ alias lk="la -S"
 # dotfile editing
 alias nvimrc="$EDITOR ~/dotfiles/nvimrc"
 alias zshrc="$EDITOR ~/dotfiles/zshrc"
+
+[[ -s "/Users/adrianbrink/.gvm/scripts/gvm" ]] && source "/Users/adrianbrink/.gvm/scripts/gvm"

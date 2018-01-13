@@ -1,6 +1,7 @@
 [user]
   email = adrian@brink-holdings.com
   name = Adrian Brink
+	signingkey = F61053D3FBD06353
 
 [core]
   editor = nvim
@@ -10,7 +11,7 @@
   unstage = reset HEAD --
 
 [commit]
-  gpgsign = false
+	gpgsign = true
 
 [gpg]
   program = gpg2
