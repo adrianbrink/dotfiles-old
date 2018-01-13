@@ -14,7 +14,7 @@
 	gpgsign = true
 
 [gpg]
-  program = gpg2
+  program = gpg
 
 [pull]
   default = current
@@ -34,3 +34,6 @@
 
 [stash]
   showPatch = true
+
+[credential]
+	helper = osxkeychain
