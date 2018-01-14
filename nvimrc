@@ -3,6 +3,10 @@
 "----------------------
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 " Git bits
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
@@ -12,7 +16,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'troydm/easybuffer.vim'
 
 " Wizard autocompletion
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 " Emoji autocompletion for commit messages and markdown
 Plug 'fszymanski/deoplete-emoji'
 
@@ -28,7 +32,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 
 " Linty lint
-"Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 
 " Text swizzeling
 Plug 'tpope/vim-surround'
@@ -52,7 +56,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'ryanoasis/vim-devicons'
 
 " Directory exploration
-"Plug 'justinmk/vim-dirvish'
+Plug 'justinmk/vim-dirvish'
 
 " Status Bar + Buffer Bar
 Plug 'vim-airline/vim-airline'
@@ -79,6 +83,12 @@ Plug 'henrik/vim-indexed-search'
 
 " editor config
 Plug 'editorconfig/editorconfig-vim'
+
+" go
+Plug 'fatih/vim-go'
+
+" rust
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -157,6 +167,9 @@ set inccommand=nosplit
 
 " Default peekaboo window
 let g:peekaboo_window = 'vertical botright 30new'
+
+" Code folding
+set foldmethod=syntax
 
 
 "----------------------
@@ -403,3 +416,27 @@ function! RenameFile()
     redraw!
   endif
 endfunction
+
+
+"-------------------
+" Python
+"-------------------
+let g:python_host_prog = "/Users/adrianbrink/.pyenv/versions/neovim2/bin/python"
+let g:python3_host_prog = "/Users/adrianbrink/.pyenv/versions/neovim3/bin/python"
+
+"-------------------
+" Rust
+"-------------------
+let g:rustfmt_autosave = 1
+
+"-------------------
+" Syntastic
+"-------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
