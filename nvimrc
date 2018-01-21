@@ -4,30 +4,26 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Markdown
-Plug 'godlygeek/tabular'
+"Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " Git bits
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
 
 " Buffer Navigation
 Plug 'troydm/easybuffer.vim'
 
 " Wizard autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 " Emoji autocompletion for commit messages and markdown
-Plug 'fszymanski/deoplete-emoji'
+"Plug 'fszymanski/deoplete-emoji'
 
 " make tab do all
 Plug 'ervandew/supertab'
 
-" text snippets
-"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " less keystrokes
-Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 
@@ -37,7 +33,7 @@ Plug 'w0rp/ale'
 " Text swizzeling
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
+"Plug 'tpope/vim-repeat'
 
 " junegunn 🙏
 " see contents of registers real quick
@@ -47,7 +43,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install'  } | Plug 'june
 " tranquil poetry mode
 Plug 'junegunn/goyo.vim'
 " emoji, the blood of life
-Plug 'junegunn/vim-emoji'
+"Plug 'junegunn/vim-emoji'
 
 " pretty colours
 Plug 'chriskempson/base16-vim'
