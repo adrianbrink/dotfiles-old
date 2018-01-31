@@ -15,7 +15,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'troydm/easybuffer.vim'
 
 " Wizard autocompletion
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 " Emoji autocompletion for commit messages and markdown
 "Plug 'fszymanski/deoplete-emoji'
 
@@ -85,6 +85,20 @@ Plug 'fatih/vim-go'
 
 " rust
 Plug 'rust-lang/rust.vim'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'cespare/vim-toml'
+
+" solidity
+Plug 'tomlion/vim-solidity'
+
+" swift
+Plug 'keith/swift.vim'
+
+" Nerdtree
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -424,6 +438,9 @@ let g:python3_host_prog = "/Users/adrianbrink/.pyenv/versions/neovim3/bin/python
 " Rust
 "-------------------
 let g:rustfmt_autosave = 1
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+    \ }
 
 "-------------------
 " Syntastic

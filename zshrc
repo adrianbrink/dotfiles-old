@@ -150,7 +150,9 @@ alias nvimrc="$EDITOR ~/dotfiles/nvimrc"
 alias zshrc="$EDITOR ~/dotfiles/zshrc"
 
 [[ -s "/Users/adrianbrink/.gvm/scripts/gvm" ]] && source "/Users/adrianbrink/.gvm/scripts/gvm"
+export GOPATH="$HOME/code/go-workspace"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
