@@ -151,6 +151,7 @@ alias zshrc="$EDITOR ~/dotfiles/zshrc"
 
 [[ -s "/Users/adrianbrink/.gvm/scripts/gvm" ]] && source "/Users/adrianbrink/.gvm/scripts/gvm"
 export GOPATH="$HOME/code/go-workspace"
+export PATH="$PATH:$GOPATH/bin"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
