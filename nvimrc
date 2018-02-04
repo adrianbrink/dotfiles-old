@@ -17,7 +17,7 @@ Plug 'troydm/easybuffer.vim'
 " Wizard autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 " Emoji autocompletion for commit messages and markdown
-"Plug 'fszymanski/deoplete-emoji'
+Plug 'fszymanski/deoplete-emoji'
 
 " make tab do all
 Plug 'ervandew/supertab'
@@ -43,7 +43,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install'  } | Plug 'june
 " tranquil poetry mode
 Plug 'junegunn/goyo.vim'
 " emoji, the blood of life
-"Plug 'junegunn/vim-emoji'
+Plug 'junegunn/vim-emoji'
 
 " pretty colours
 Plug 'chriskempson/base16-vim'
@@ -82,6 +82,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 " go
 Plug 'fatih/vim-go'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " rust
 Plug 'rust-lang/rust.vim'
@@ -99,6 +100,16 @@ Plug 'keith/swift.vim'
 
 " Nerdtree
 Plug 'scrooloose/nerdtree'
+
+" Javascript
+Plug 'pangloss/vim-javascript'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
+" JSON
+Plug 'elzr/vim-json'
+
+" Tagbar
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
@@ -226,7 +237,7 @@ let g:jsdoc_allow_input_prompt = 1
 " Linting
 "----------------------
 let g:ale_linters = {
-      \'javascript': ['standard']
+      \'javascript': ['eslint']
       \}
 " let g:ale_sign_error = '👺'
 " let g:ale_sign_warning = '😕'
@@ -453,3 +464,55 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Tagbar
+map <C-s> :TagbarToggle<CR>
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+    \ }
+
+let g:tagbar_type_rust = {
+    \ 'ctagstype' : 'rust',
+    \ 'kinds' : [
+        \'T:types,type definitions',
+        \'f:functions,function definitions',
+        \'g:enum,enumeration names',
+        \'s:structure names',
+        \'m:modules,module names',
+        \'c:consts,static constants',
+        \'t:traits,traits',
+        \'i:impls,trait implementations',
+    \]
+    \}
