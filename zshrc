@@ -113,7 +113,7 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 # Go
 ## GVM
-[[ -s "/home/avo/.gvm/scripts/gvm" ]] && source "/home/avo/.gvm/scripts/gvm"
+[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
 export GOPATH=$HOME/code/go-workspace
 export PATH=$PATH:$GOPATH/bin
 
