@@ -1,7 +1,7 @@
 ROOT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 dotfiles:
-	@echo "Setting up Ubuntu"
+	@echo "Setting up dotfiles"
 	mkdir -p $(HOME)/.config/nvim
 	mkdir -p $(HOME)/.config/git
 	ln -sf $(ROOT_DIR)/nvimrc $(HOME)/.config/nvim/init.vim

@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/avo/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -100,20 +100,54 @@ alias cls="clear; ls"
 alias exs="source ~/.zshrc"
 
 # listing
-alias ls="ls -Fh --color --group-directories-first"
-alias l="ls -1A"
-alias la="ls -lA"
-alias ll="la"
-alias lk="la -S"
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+    alias ls="gls -Fh --color --group-directories-first"
+    alias l="gls -1A"
+    alias la="gls -lA"
+    alias ll="gla"
+    alias lk="gla -S"
+  ;;
+  Linux)
+    # commands for Linux go here
+    alias ls="ls -Fh --color --group-directories-first"
+    alias l="ls -1A"
+    alias la="ls -lA"
+    alias ll="la"
+    alias lk="la -S"
+  ;;
+esac
+
+# gpg
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+    # Add the following to your shell init to set up gpg-agent automatically for every shell
+    if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
+	    source ~/.gnupg/.gpg-agent-info
+	    export GPG_AGENT_INFO
+    else
+	    eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
+    fi
+  ;;
+  Linux)
+    alias gpg="gpg2"
+  ;;
+esac
+
+
+
+
 
 # dotfile editing
-alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
-alias zshrc="$EDITOR ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias nvimrc="$EDITOR $HOME/.config/nvim/init.vim"
+alias zshrc="$EDITOR $HOME/.zshrc"
+alias ohmyzsh="nvim $HOME/.oh-my-zsh"
 
 # Go
 ## GVM
-[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 export GOPATH=$HOME/code/go-workspace
 export PATH=$PATH:$GOPATH/bin
 
