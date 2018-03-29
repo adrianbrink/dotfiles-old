@@ -1,0 +1,20 @@
+[user]
+	name = Adrian Brink
+	email = adrian@cryptium.io
+	signingkey = F61053D3FBD06353
+
+[core]
+	editor = nvim
+	excludesfile = /home/avo/.config/git/ignore
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	program = gpg
+
+[push]
+	default = current
+
+[pull]
+	default = current
