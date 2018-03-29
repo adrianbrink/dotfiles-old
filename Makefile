@@ -1,6 +1,6 @@
 ROOT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-ubuntu:
+dotfiles:
 	@echo "Setting up Ubuntu"
 	mkdir -p $(HOME)/.config/nvim
 	mkdir -p $(HOME)/.config/git
@@ -13,7 +13,4 @@ ubuntu:
 	ln -sf $(ROOT_DIR)/gitconfig $(HOME)/.config/git/config
 	ln -sf $(ROOT_DIR)/gitignore $(HOME)/.config/git/ignore
 
-macos:
-	echo "Setting up MacOS"
-
-.PHONY: ubuntu
+.PHONY: dotfiles
