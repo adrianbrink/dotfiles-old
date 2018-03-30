@@ -4,6 +4,9 @@ dotfiles:
 	@echo "Setting up dotfiles"
 	mkdir -p $(HOME)/.config/nvim
 	mkdir -p $(HOME)/.config/git
+	mkdir -p $(HOME)/.gnupg
+	ln -sf $(ROOT_DIR)/gpg-agent.conf $(HOME)/.gnupg/gpg-agent.conf
+	ln -sf $(ROOT_DIR)/gpg.conf $(HOME)/.gnupg/gpg.conf
 	ln -sf $(ROOT_DIR)/nvimrc $(HOME)/.config/nvim/init.vim
 	ln -sf $(ROOT_DIR)/zshrc $(HOME)/.zshrc
 	ln -sf $(ROOT_DIR)/zshenv $(HOME)/.zshenv

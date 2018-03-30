@@ -124,12 +124,12 @@ case `uname` in
   Darwin)
     # commands for OS X go here
     # Add the following to your shell init to set up gpg-agent automatically for every shell
-    #if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-	  #  source ~/.gnupg/.gpg-agent-info
-	  #  export GPG_AGENT_INFO
-    #else
-	  #  eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
-    #fi
+    if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
+	    source ~/.gnupg/.gpg-agent-info
+	    export GPG_AGENT_INFO
+    else
+	    eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
+    fi
   ;;
   Linux)
     alias gpg="gpg2"
