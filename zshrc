@@ -194,6 +194,8 @@ setopt INC_APPEND_HISTORY # share history between sessions
 setopt EXTENDED_HISTORY # add timestamps to history
 setopt HIST_REDUCE_BLANKS
 
+[ -s "/Users/avo/.jabba/jabba.sh" ] && source "/Users/avo/.jabba/jabba.sh"
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
