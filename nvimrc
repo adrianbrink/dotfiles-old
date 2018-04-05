@@ -10,6 +10,18 @@ Plug 'tpope/vim-fugitive'
 " make tab do all
 Plug 'ervandew/supertab'
 
+" Autocompletion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Go
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+" Rust
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+" Javascript
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
 " Linty lint
 Plug 'w0rp/ale'
 
@@ -49,8 +61,8 @@ Plug 'editorconfig/editorconfig-vim'
 " Initialize plugin system
 call plug#end()
 
-let g:python_host_prog = '$HOME/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '$HOME/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = '/Users/avo/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/avo/.pyenv/versions/neovim3/bin/python'
 
 "----------------------
 "" General Wizardry
@@ -101,6 +113,9 @@ set splitbelow
 "" Autocomplete
 "----------------------
 let g:deoplete#enable_at_startup = 1
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ }
 
 
 "----------------------
