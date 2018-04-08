@@ -3,6 +3,10 @@
 "----------------------
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 " Git bits
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
@@ -57,6 +61,9 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " editor config
 Plug 'editorconfig/editorconfig-vim'
+
+" Tagbar
+Plug 'majutsushi/tagbar'
 
 " Initialize plugin system
 call plug#end()
@@ -210,6 +217,57 @@ set hidden
 map <Leader><tab> :bn<CR>
 map <Leader>` :bp<CR>
 map ` :EasyBuffer<CR>
+
+"--------------------------
+" Misc
+"-------------------------
+
+" Tagbar
+map <C-s> :TagbarToggle<CR>
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+    \ }
+
+let g:tagbar_type_rust = {
+    \ 'ctagstype' : 'rust',
+    \ 'kinds' : [
+        \'T:types,type definitions',
+        \'f:functions,function definitions',
+        \'g:enum,enumeration names',
+        \'s:structure names',
+        \'m:modules,module names',
+        \'c:consts,static constants',
+        \'t:traits,traits',
+        \'i:impls,trait implementations',
+    \]
+\}
+
+" Nerdtree
+map <C-n> :NERDTreeToggle<CR>
 
 "----------------------
 " Helpful Functions
