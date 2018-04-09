@@ -58,7 +58,7 @@ alias emacs="nvim"
 # tmux
 alias tns="tmux new -s"
 alias tls="tmux ls"
-alias ta="tmux a"
+alias ta="tmux a -t"
 alias tks="tmux kill-session -t"
 
 # docker
