@@ -197,7 +197,7 @@ setopt HIST_REDUCE_BLANKS
 [ -s "/Users/avo/.jabba/jabba.sh" ] && source "/Users/avo/.jabba/jabba.sh"
 
 # Haskell
-export PATH="$PATH:PATH$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # OPAM configuration
 . /Users/avo/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
