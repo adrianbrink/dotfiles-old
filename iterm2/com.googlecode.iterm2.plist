@@ -816,8 +816,6 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -857,9 +855,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 535 918 381 0 0 1680 1050 </string>
+	<string>269 535 796 473 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 23 1680 1027 0 0 1680 1050 </string>
+	<string>0 0 1680 1050 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>60 106 1620 807 0 0 1680 1050 </string>
 	<key>NeverWarnAboutShortLivedSessions_10A7AC91-4850-402F-9418-EB1ACB7019D0</key>
@@ -1571,6 +1569,8 @@
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>544122171.43641901</real>
 	<key>OnlyWhenMoreTabs</key>
@@ -1617,7 +1617,7 @@
 	<key>PrefsCustomFolder</key>
 	<string>/Users/avo/dotfiles/iterm2</string>
 	<key>PromptOnQuit</key>
-	<false/>
+	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -1629,7 +1629,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-02T12:35:12Z</date>
+	<date>2018-04-14T19:22:52Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
