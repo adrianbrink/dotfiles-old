@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$(HOME)/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 
 # golang
 ## gvm
-[[ -s "$(HOME)/.gvm/scripts/gvm" ]] && source "$(HOME)/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 export GOPATH=$HOME/code/go-workspace
 export PATH=$PATH:$GOPATH/bin
 
@@ -134,11 +134,11 @@ zplug load
 
 # java
 ## jvm
-[ -s "$(HOME)/.jabba/jabba.sh" ] && source "$(HOME)/.jabba/jabba.sh"
+[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 
 # ocaml
 ## OPAM configuration
-. $(HOME)/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # python
 ## pyenv
