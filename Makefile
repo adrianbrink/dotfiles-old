@@ -4,16 +4,19 @@ dotfiles:
 	@echo "Setting up dotfiles"
 	mkdir -p $(HOME)/.config/nvim
 	mkdir -p $(HOME)/.config/git
-	mkdir -p $(HOME)/.gnupg
-	ln -sf $(ROOT_DIR)/gpg-agent.conf $(HOME)/.gnupg/gpg-agent.conf
-	ln -sf $(ROOT_DIR)/gpg.conf $(HOME)/.gnupg/gpg.conf
-	ln -sf $(ROOT_DIR)/nvimrc $(HOME)/.config/nvim/init.vim
+	rm $(HOME)/.zshrc
+	rm $(HOME)/.zshenv
+	rm $(HOME)/.zprofile
+	rm $(HOME)/.zlogin
+	rm $(HOME)/.config/nvim/init.vim
+	rm $(HOME)/.config/git/ignore
+	rm $(HOME)/.config/git/config
+	ln -sf $(ROOT_DIR)/nvim/init.vim $(HOME)/.config/nvim/init.vim
 	ln -sf $(ROOT_DIR)/zshrc $(HOME)/.zshrc
 	ln -sf $(ROOT_DIR)/zshenv $(HOME)/.zshenv
 	ln -sf $(ROOT_DIR)/zprofile $(HOME)/.zprofile
 	ln -sf $(ROOT_DIR)/zlogin $(HOME)/.zlogin
-	ln -sf $(ROOT_DIR)/tmux.conf $(HOME)/.tmux.conf
-	ln -sf $(ROOT_DIR)/gitconfig $(HOME)/.config/git/config
-	ln -sf $(ROOT_DIR)/gitignore $(HOME)/.config/git/ignore
+	ln -sf $(ROOT_DIR)/git/config $(HOME)/.config/git/config
+	ln -sf $(ROOT_DIR)/git/ignore $(HOME)/.config/git/ignore
 
 .PHONY: dotfiles

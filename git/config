@@ -1,7 +1,7 @@
 [user]
 	name = Adrian Brink
 	email = adrian@cryptium.io
-	signingkey = F61053D3FBD06353
+	signingkey = 4C4A115D11E29F98272A61F5F61053D3FBD06353
 
 [core]
 	editor = nvim
@@ -16,4 +16,4 @@
 	default = current
 
 [pull]
-	default = current
+default = current

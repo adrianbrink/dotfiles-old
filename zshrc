@@ -2,12 +2,19 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=$HOME/.oh-my-zsh
+export ZSH="/Users/adrianbrink/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -15,6 +22,18 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -32,6 +51,9 @@ ZSH_THEME="robbyrussell"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -47,160 +69,88 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=en_GB.UTF-8
+# export LANG=en_US.UTF-8
 
-# Editors
-alias v="nvim"
-alias vi="nvim"
-alias vim="nvim"
-alias emacs="nvim"
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-# tmux
-alias tns="tmux new -s"
-alias tls="tmux ls"
-alias ta="tmux a -t"
-alias tks="tmux kill-session -t"
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
-# docker
-alias dim="docker images"
-alias dprune="docker system prune --all"
-alias dps="docker ps --format \"table {{.Names}}\t{{.Status}}\t{{.ID}}\t{{.Ports}}\""
-alias dpsa="docker ps -a --format \"table {{.Names}}\t{{.Status}}\t{{.ID}}\t{{.Ports}}\""
-alias dpsal="docker ps -a"
-alias dpsl="docker ps"
-alias drm="docker rm"
-alias drmA="docker rm \$(docker ps -a -q)"
-alias drmAf="docker rm -f \$(docker ps -a -q)"
-alias drmi="docker rmi"
-alias drmiA="docker rmi \$(docker images -q)"
-alias dsA="docker stop \$(docker ps -a -q)"
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# git
-alias gb="git branch"
-alias gbc="git branch | grep \* | cut -d ' ' -f2"
-alias gbsu="git branch --set-upstream-to=origin/\$(gbc) \$(gbc)"
-alias gbD="gb -D"
-alias gbd="gb -d"
-alias gbDi="gb | fzf -m | xargs git branch -D"
-alias gbdi="gb | fzf -m | xargs git branch -d"
-alias gc="git commit --verbose"
-alias gcam="gc --amend"
-alias gcf="gcam --reuse-message HEAD"
-alias gcm="git commit --message"
-alias gco="git checkout"
-alias gl="git log --topo-order --pretty=format:'%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'"
-alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-alias gwd="git diff --no-ext-diff --patch-with-stat"
-alias gwdc="gwd --cached"
-alias gws="git status --short"
-alias gpa="ls | xargs -P8 -I{} sh -c 'git -C {} pull --all && git -C {} checkout master; git -C {} pull; git -C {} checkout stable; git -C {} pull; echo {}'"
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# misc
-alias cls="clear; ls"
-alias exs="source ~/.zshrc"
-
-# listing
-case `uname` in
-  Darwin)
-    # commands for OS X go here
-    alias ls="gls -Fh --color --group-directories-first"
-    alias l="gls -1A"
-    alias la="gls -lA"
-    alias ll="gla"
-    alias lk="gla -S"
-  ;;
-  Linux)
-    # commands for Linux go here
-    alias ls="ls -Fh --color --group-directories-first"
-    alias l="ls -1A"
-    alias la="ls -lA"
-    alias ll="la"
-    alias lk="la -S"
-  ;;
-esac
-
-# gpg
-case `uname` in
-  Darwin)
-    # commands for OS X go here
-    # Add the following to your shell init to set up gpg-agent automatically for every shell
-    if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-	    source ~/.gnupg/.gpg-agent-info
-	    export GPG_AGENT_INFO
-    else
-	    eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
-    fi
-  ;;
-  Linux)
-    alias gpg="gpg2"
-  ;;
-esac
-
-
-
-
-
-# dotfile editing
-alias nvimrc="$EDITOR $HOME/.config/nvim/init.vim"
-alias zshrc="$EDITOR $HOME/.zshrc"
-alias ohmyzsh="nvim $HOME/.oh-my-zsh"
-
-# Go
-## GVM
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+# golang
+## gvm
+[[ -s "/Users/adrianbrink/.gvm/scripts/gvm" ]] && source "/Users/adrianbrink/.gvm/scripts/gvm"
 export GOPATH=$HOME/code/go-workspace
 export PATH=$PATH:$GOPATH/bin
 
-# NVM
+# javascript
+## nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Yarn
-## https://yarnpkg.com/lang/en/docs/install/
-alias nodejs=node
+# zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
 
-# Zplug
-source ~/.zplug/init.zsh
-#
-# Install plugins if there are plugins that have not been installed
+# swift
+## swiftenv
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
+
+# zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+## Install plugins if there are plugins that have not been installed
 if ! zplug check; then
         zplug install
 fi
-#
-# Self management for zplug
+
+## Self management for zplug
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
+
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
 zplug "plugins/colored-man-pages", from:oh-my-zsh
-#
-# Then, source plugins and add commands to $PATH
+
+## Then, source plugins and add commands to $PATH
 zplug load
 
-# source FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#
-# use rg for fzf
-export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/*'"
+# java
+## jvm
+[ -s "/Users/adrianbrink/.jabba/jabba.sh" ] && source "/Users/adrianbrink/.jabba/jabba.sh"
 
-# command history please
-HISTFILE=~/.zhistory
-HISTSIZE=100000
-SAVEHIST=100000
-setopt APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt INC_APPEND_HISTORY # share history between sessions
-setopt EXTENDED_HISTORY # add timestamps to history
-setopt HIST_REDUCE_BLANKS
+# ocaml
+## OPAM configuration
+. /Users/adrianbrink/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-[ -s "/Users/avo/.jabba/jabba.sh" ] && source "/Users/avo/.jabba/jabba.sh"
+# python
+## pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
-# Haskell
-export PATH="$PATH:$HOME/.local/bin"
+# google-cloud
+## gcp sdk
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
-# OPAM configuration
-. /Users/avo/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# ruby
+## Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+

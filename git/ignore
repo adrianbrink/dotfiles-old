@@ -1,4 +1,5 @@
-# Created by https://www.gitignore.io/api/git,vim,macos,linux
+
+# Created by https://www.gitignore.io/api/git,vim,linux,macos,visualstudiocode
 
 ### Git ###
 *.orig
@@ -19,7 +20,8 @@
 .nfs*
 
 ### macOS ###
-*.DS_Store
+# General
+.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -46,15 +48,30 @@ Temporary Items
 .apdisk
 
 ### Vim ###
-# swap
-.sw[a-p]
-.*.sw[a-p]
-# session
-Session.vim
-# temporary
-.netrwhist
-# auto-generated tag files
-tags
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
 
-# End of https://www.gitignore.io/api/git,vim,macos,linux
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+
+# End of https://www.gitignore.io/api/git,vim,linux,macos,visualstudiocode
 
