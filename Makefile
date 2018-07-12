@@ -4,13 +4,6 @@ dotfiles:
 	@echo "Setting up dotfiles"
 	mkdir -p $(HOME)/.config/nvim
 	mkdir -p $(HOME)/.config/git
-	rm $(HOME)/.zshrc
-	rm $(HOME)/.zshenv
-	rm $(HOME)/.zprofile
-	rm $(HOME)/.zlogin
-	rm $(HOME)/.config/nvim/init.vim
-	rm $(HOME)/.config/git/ignore
-	rm $(HOME)/.config/git/config
 	ln -sf $(ROOT_DIR)/nvim/init.vim $(HOME)/.config/nvim/init.vim
 	ln -sf $(ROOT_DIR)/zshrc $(HOME)/.zshrc
 	ln -sf $(ROOT_DIR)/zshenv $(HOME)/.zshenv
