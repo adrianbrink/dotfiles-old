@@ -53,7 +53,7 @@ augroup vimrcEx
     autocmd InsertEnter * call ale#Lint()
     autocmd InsertLeave * call ale#Lint()
   else
-    echoerr "The thoughtbot dotfiles require NeoVim or Vim 8"
+    echoerr "The dotfiles require NeoVim or Vim 8"
   endif
 augroup END
 
@@ -158,6 +158,13 @@ set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
+
+" themes
+set termguicolors
+colorscheme gruvbox
+set background=dark
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
