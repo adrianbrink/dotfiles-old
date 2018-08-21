@@ -18,7 +18,7 @@
 [merge]
   ff = only
 [commit]
-  template = ~/.gitmessage
+  template = ~/.config/message
 [fetch]
   prune = true
 [rebase]
