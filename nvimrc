@@ -21,6 +21,7 @@ Plug 'eagletmt/neco-ghc'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
+Plug 'lervag/vimtex'
 
 " Initialize plugin system
 call plug#end()
