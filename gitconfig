@@ -2,10 +2,8 @@
 	name = Adrian Brink
 	email = adrian@cryptium.io
 	signingkey = F61053D3FBD06353
-
 [color]
 	ui = auto
-
 [alias]
 	a = add
 	b = branch
@@ -19,9 +17,9 @@
 	tre = log --graph --decorate --pretty=oneline --abbrev-commit
 	tr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %s' --abbrev-commit
 	l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %s' --decorate --abbrev-commit
-
 [push]
 	default = simple
-
 [commit]
 	gpgsign = true
+[credential]
+	helper = osxkeychain
