@@ -28,6 +28,9 @@ call plug#end()
 let g:python_host_prog = '/Users/adrian/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/Users/adrian/.pyenv/versions/neovim3/bin/python'
 
+let g:deoplete#sources#rust#racer_binary='/Users/adrian/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/Users/adrian/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src'
+
 let g:deoplete#enable_at_startup = 1
 
 " =============================================================================
