@@ -15,3 +15,6 @@ eval "$(swiftenv init -)"
 
 # XDG Config Home
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# Sccache for compilation caching
+export RUSTC_WRAPPER=sccache
