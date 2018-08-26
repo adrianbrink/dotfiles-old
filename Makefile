@@ -4,9 +4,11 @@ all:
 	@echo "Installing dotfiles"
 	mkdir -p $(HOME)/.config/nvim
 	mkdir -p $(HOME)/.config/git
+	mkdir -p $(HOME)/.ssh
 	ln -sf $(ROOT_DIR)/aliases $(HOME)/.aliases
 	ln -sf $(ROOT_DIR)/tmux.conf $(HOME)/.tmux.conf
 	ln -sf $(ROOT_DIR)/nvimrc $(HOME)/.config/nvim/init.vim
+	ln -sf $(ROOT_DIR)/sshconfig $(HOME)/.ssh/config
 	ln -sf $(ROOT_DIR)/zshrc $(HOME)/.zshrc
 	ln -sf $(ROOT_DIR)/zshenv $(HOME)/.zshenv
 	ln -sf $(ROOT_DIR)/zlogin $(HOME)/.zlogin
