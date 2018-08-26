@@ -44,5 +44,9 @@ test -r /Users/adrian/.opam/opam-init/init.zsh && . /Users/adrian/.opam/opam-ini
 # fzf sourcing
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# google-cloud-sdk
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
