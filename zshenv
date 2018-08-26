@@ -18,3 +18,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # Sccache for compilation caching
 export RUSTC_WRAPPER=sccache
+
+# Haskell binary path
+export PATH="$HOME/.local/bin:$PATH"
